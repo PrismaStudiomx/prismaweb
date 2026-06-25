@@ -13,7 +13,7 @@ const steps = [
   {
     number: "02",
     title: "Diseno UX/UI",
-    description: "Disenamos una experiencia visual clara, alineada con tu marca y pensada para guiar al usuario a la accion.",
+    description: "Diseñamos una experiencia visual clara, alineada con tu marca y pensada para guiar al usuario a la accion.",
   },
   {
     number: "03",

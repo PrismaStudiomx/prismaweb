@@ -1,75 +1,93 @@
-"use client"
+"use client";
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-import Image from "next/image"
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import Image from "next/image";
 
-// Configuracion de los demos - Facil de editar
 export const demos = [
   {
-    id: 1,
-    name: "BarberPOS",
-    category: "Punto de Venta / Barberia",
-    description: "Sistema punto de venta completo para barberias con gestion de citas, inventario y reportes.",
-    logo: "/images/demos/demo-1.png",
-    url: "#",
-    tags: ["POS", "Citas", "Inventario"],
-  },
+  id: 1,
+  name: "Vintage Studio",
+  category: "Punto de Venta / Barbería",
+  description:
+    "Sistema POS para barberías con gestión de citas, ventas, servicios, barberos, corte de caja y panel administrativo.",
+  image: "/images/demos/vintage.png",
+  url: "https://vintagestudiogdl.vercel.app/",
+  tags: ["POS", "Citas", "Ventas"],
+},
   {
-    id: 2,
-    name: "RestaurantePRO",
-    category: "Punto de Venta / Restaurante",
-    description: "Gestion integral para restaurantes con pedidos en linea, mesas y cocina.",
-    logo: "/images/demos/demo-2.png",
-    url: "#",
-    tags: ["Pedidos", "Mesas", "Cocina"],
-  },
+  id: 2,
+  name: "Umbral",
+  category: "Inmobiliaria / Presencia digital",
+  description:
+    "Experiencia inmobiliaria con enfoque editorial para presentar propiedades, zonas y recorridos de forma más atractiva y profesional.",
+  image: "/images/demos/umbral.jpg",
+  url: "https://umbral-gray-six.vercel.app/",
+  tags: ["Inmobiliaria", "Editorial", "Propiedades"],
+},
   {
-    id: 3,
-    name: "GymControl",
-    category: "Gestion / Gimnasio",
-    description: "Administracion de gimnasios con control de membresias, clases y pagos.",
-    logo: "/images/demos/demo-3.png",
-    url: "#",
-    tags: ["Membresias", "Clases", "Pagos"],
-  },
+  id: 3,
+  name: "Aura",
+  category: "Spa Médico / Clínica estética",
+  description:
+    "Landing premium para clínica estética con una experiencia visual enfocada en transmitir confianza, exclusividad y facilitar la reserva de citas.",
+  image: "/images/demos/aura.jpg",
+  url: "https://aura-chi-mauve.vercel.app/",
+  tags: ["Spa Médico", "Estética", "Reservas"],
+},
   {
-    id: 4,
-    name: "MediCitas",
-    category: "Salud / Consultorio",
-    description: "Sistema de citas medicas con expediente electronico y recordatorios automaticos.",
-    logo: "/images/demos/demo-4.png",
-    url: "#",
-    tags: ["Citas", "Expedientes", "SMS"],
-  },
+  id: 4,
+  name: "Lúmina",
+  category: "Eventos / Fotografía / Experiencias",
+  description:
+    "Landing visual y cinematográfica para salones de eventos, fotógrafos y marcas que crean experiencias memorables.",
+  image: "/images/demos/lumina.jpg",
+  url: "https://lumina-sigma-orcin.vercel.app/",
+  tags: ["Eventos", "Fotografía", "Experiencias"],
+},
   {
-    id: 5,
-    name: "EscuelaPLUS",
-    category: "Educacion / Escuela",
-    description: "Plataforma educativa con control escolar, calificaciones y comunicacion.",
-    logo: "/images/demos/demo-5.png",
-    url: "#",
-    tags: ["Calificaciones", "Padres", "Tareas"],
-  },
+  id: 5,
+  name: "NOST",
+  category: "Ecommerce / Streetwear",
+  description:
+    "Tienda online para marca de ropa con catálogo de productos, carrito de compras, página de producto, checkout y panel administrativo.",
+  image: "/images/demos/nost.png",
+  url: "https://nost-rs5a.vercel.app/",
+  tags: ["Ecommerce", "Carrito", "Admin"],
+},
   {
     id: 6,
-    name: "InmoGestion",
-    category: "Inmobiliaria",
-    description: "Software inmobiliario con catalogo de propiedades y seguimiento de clientes.",
-    logo: "/images/demos/demo-6.png",
-    url: "#",
-    tags: ["Propiedades", "CRM", "Portal"],
+    name: "La Pampa",
+    category: "Restaurante argentino",
+    description:
+      "Landing gastronómica para restaurante con presentación de experiencia, cortes, ubicación y reservas.",
+    image: "/images/demos/lapampa.png",
+    url: "https://la-pampa-web.vercel.app/",
+    tags: ["Restaurante", "Reservas", "Menú"],
   },
-]
+  {
+  id: 7,
+  name: "Vértice",
+  category: "Consultoría empresarial",
+  description:
+    "Landing profesional para consultoría empresarial con enfoque en autoridad, servicios, propuesta de valor y captación de prospectos.",
+  image: "/images/demos/vertice.png",
+  url: "https://vertice-eta.vercel.app/",
+  tags: ["Consultoría", "Empresas", "Estrategia"],
+},
+];
 
 export function Demos() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px",
+  });
 
   return (
     <section id="demos" className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
@@ -81,86 +99,129 @@ export function Demos() {
             <span className="w-2 h-2 bg-green-500 rounded-full" />
             Proyectos realizados
           </span>
+
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground text-balance">
-            Proyectos que combinan{" "}
-            <span className="italic text-primary">diseno y resultados</span>
+            Demos reales que muestran{" "}
+            <span className="italic text-primary">
+              diseño, estrategia y ejecución
+            </span>
           </h2>
+
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-            Mostramos trabajos reales con una presentacion visual mas limpia, directa y enfocada en el impacto del proyecto.
+            Cada demo está pensada para mostrar cómo puede verse un negocio con una presencia digital clara, profesional y lista para convertir visitas en contactos.
           </p>
         </motion.div>
 
-        {/* Demos Grid */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {demos.map((demo, index) => (
-            <DemoCard key={demo.id} demo={demo} index={index} isReversed={index % 2 !== 0} />
+            <DemoCard
+              key={demo.id}
+              demo={demo}
+              index={index}
+              isReversed={index % 2 !== 0}
+            />
           ))}
         </div>
+
       </div>
     </section>
-  )
+  );
 }
 
-function DemoCard({ 
-  demo, 
-  index, 
-  isReversed 
-}: { 
-  demo: typeof demos[0]
-  index: number
-  isReversed: boolean 
+function DemoCard({
+  demo,
+  index,
+  isReversed,
+}: {
+  demo: (typeof demos)[0];
+  index: number;
+  isReversed: boolean;
 }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-50px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-50px",
+  });
 
   return (
-    <motion.div
+    <motion.a
       ref={ref}
+      href={demo.url}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${isReversed ? "md:grid-flow-dense" : ""}`}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.08,
+      }}
+      className="group block"
     >
-      {/* Content */}
-      <div className={isReversed ? "md:col-start-2" : ""}>
-        <span className="text-sm text-primary font-medium">{demo.category}</span>
-        <h3 className="mt-2 text-2xl md:text-3xl font-bold text-foreground">{demo.name}</h3>
-        <p className="mt-3 text-muted-foreground leading-relaxed">{demo.description}</p>
+      <div
+        className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${
+          isReversed ? "md:grid-flow-dense" : ""
+        }`}
+      >
 
-        {/* Tags */}
-        <div className="mt-6 flex flex-wrap gap-2">
-          {demo.tags.map((tag) => (
-            <span key={tag} className="px-3 py-1 bg-secondary text-sm text-foreground rounded-full">
-              {tag}
-            </span>
-          ))}
-        </div>
+        <div className={isReversed ? "md:col-start-2" : ""}>
+          <span className="text-sm text-primary font-medium">
+            {demo.category}
+          </span>
 
-        {/* CTA */}
-        <a
-          href={demo.url}
-          target={demo.url !== "#" ? "_blank" : undefined}
-          rel={demo.url !== "#" ? "noopener noreferrer" : undefined}
-          className="inline-flex items-center gap-2 mt-6 text-primary font-medium hover:underline"
-        >
-          Ver proyecto
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </a>
-      </div>
+          <h3 className="mt-2 text-2xl md:text-4xl font-bold text-foreground">
+            {demo.name}
+          </h3>
 
-      {/* Image Placeholder */}
-      <div className={`relative aspect-[4/3] bg-secondary rounded-2xl overflow-hidden ${isReversed ? "md:col-start-1" : ""}`}>
-        <div className="absolute inset-0 flex items-center justify-center">
-          {/* Placeholder - Replace with actual demo screenshots */}
-          <div className="w-24 h-24 rounded-2xl bg-card border border-border flex items-center justify-center shadow-lg">
-            <span className="text-4xl font-bold text-primary">{demo.name.charAt(0)}</span>
+          <p className="mt-4 text-muted-foreground leading-relaxed max-w-xl">
+            {demo.description}
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-2">
+            {demo.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 bg-secondary text-sm text-foreground rounded-full"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <div className="inline-flex items-center gap-2 mt-7 text-primary font-medium">
+            Ver demo
+            <svg
+              className="w-4 h-4 transition-transform group-hover:translate-x-1"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
           </div>
         </div>
-        {/* Optional: Use actual image */}
-        {/* <Image src={demo.logo} alt={demo.name} fill className="object-cover" /> */}
+
+        <div
+  className={`relative aspect-[1200/630] bg-black rounded-2xl overflow-hidden border border-border shadow-sm transition duration-500 group-hover:scale-[1.015] group-hover:shadow-xl ${
+    isReversed ? "md:col-start-1" : ""
+  }`}
+>
+          <Image
+  src={demo.image}
+  alt={demo.name}
+  fill
+  sizes="(max-width: 768px) 100vw, 50vw"
+  className="object-contain transition duration-700 group-hover:scale-[1.02]"
+/>
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-60" />
+        </div>
+
       </div>
-    </motion.div>
-  )
+    </motion.a>
+  );
 }

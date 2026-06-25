@@ -67,7 +67,7 @@ export function Services() {
               las 24 horas
             </h2>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-              Disenamos paginas web para negocios, doctores y profesionales que quieren conseguir mas clientes por internet. Diseno claro, SEO incluido y entrega en 5-8 dias habiles.
+              Diseñamos paginas web para negocios, doctores y profesionales que quieren conseguir mas clientes por internet. Diseno claro, SEO incluido y entrega en 5-8 dias habiles.
             </p>
           </motion.div>
 
@@ -91,32 +91,7 @@ export function Services() {
           </div>
         </div>
 
-        {/* Performance Card */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 p-8 bg-card rounded-2xl border border-border"
-        >
-          <div className="grid md:grid-cols-4 gap-6 text-center">
-            <div className="p-4">
-              <p className="text-3xl font-bold text-foreground">95/100</p>
-              <p className="text-sm text-muted-foreground mt-1">Velocidad</p>
-            </div>
-            <div className="p-4">
-              <p className="text-3xl font-bold text-primary">+31%</p>
-              <p className="text-sm text-muted-foreground mt-1">WhatsApp</p>
-            </div>
-            <div className="p-4">
-              <p className="text-3xl font-bold text-foreground">92/100</p>
-              <p className="text-sm text-muted-foreground mt-1">SEO Score</p>
-            </div>
-            <div className="p-4">
-              <p className="text-3xl font-bold text-green-600">Organico real</p>
-              <p className="text-sm text-muted-foreground mt-1">Trafico</p>
-            </div>
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

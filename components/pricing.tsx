@@ -16,7 +16,7 @@ const plans = {
     },
     {
       name: "Profesional",
-      subtitle: "Conversion garantizada",
+      subtitle: "Conversion ",
       price: "$6,500",
       recommended: true,
       features: ["Hasta 3 secciones", "Animaciones modernas", "Integracion WhatsApp", "SEO avanzado", "Entrega 5-8 dias", "1 revision incluida"],

@@ -37,8 +37,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg text-[#64607a] leading-relaxed max-w-2xl mx-auto"
           >
-            Disenamos paginas web profesionales enfocadas en conversion. Desde{" "}
-            <strong className="text-[#1a1625]">$6,500 MXN</strong>. Entrega en{" "}
+            Diseñamos paginas web profesionales enfocadas en conversion. Desde{" "}
+            <strong className="text-[#1a1625]">$4,500 MXN</strong>. Entrega en{" "}
             <strong className="text-[#1a1625]">5-8 dias habiles</strong>. SEO incluido. Pago unico, sin mensualidades.
           </motion.p>
 

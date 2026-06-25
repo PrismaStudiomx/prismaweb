@@ -6,10 +6,10 @@ export function TopBar() {
   return (
     <div className="bg-[#7c3aed] text-white py-2.5 px-4 text-center text-sm">
       <span className="hidden sm:inline">
-        Entrega en <strong>5-8 dias</strong> - Desde <strong>$6,500 MXN</strong> - Pago unico, sin mensualidades
+        Entrega en <strong>5-8 dias</strong> - Desde <strong>$4,500 MXN</strong> - Pago unico, sin mensualidades
       </span>
       <span className="sm:hidden">
-        Desde <strong>$6,500 MXN</strong> - Entrega en 5-8 dias
+        Desde <strong>$4,500 MXN</strong> - Entrega en 5-8 dias
       </span>
       <Link 
         href="#contacto" 
